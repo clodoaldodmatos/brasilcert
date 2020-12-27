@@ -1,0 +1,366 @@
+body,html{
+    margin: 0;
+    padding:  0;
+    font-family: "Open Sans", sans-serif;
+    background-color: #fff;
+}
+
+body{
+    margin-top: 80px;
+    margin-bottom: 365px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+    max-width: 1170px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.row{
+    display: flex;
+    margin: 0 -10px;
+    flex-wrap: wrap;
+}
+
+.align-center{
+    align-items: center;
+}
+
+[class*="col"]{
+    padding: 0 10px;
+}
+
+.col-12{width:100%}
+.col-11{width:91.66666667%}
+.col-10{width:83.33333333%}
+.col-9{width:75%}
+.col-8{width:66.66666667%}
+.col-7{width:58.33333333%}
+.col-6{width:50%}
+.col-5{width:41.66666667%}
+.col-4{width:33.33333333%}
+.col-3{width:25%}
+.col-2{width:16.66666667%}
+.col-1{width:8.33333333%}
+
+header{
+    background-color: #F5F5F5;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+}
+
+.menu{
+    text-align: right;
+}
+
+.menu li{
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.menu a{
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #3c40c6;
+    font-weight: bold;
+}
+
+.area{
+    padding: 100px 0;
+}
+
+.hero{
+    background-image: url("../img/topo.jpg");
+    background-size: cover;
+}
+
+.hero h1{
+    font-size: 26px;
+    max-width: 100%;
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+
+h2{
+    font-size: 26px;
+    margin: 0 0 10px;
+}
+
+.btn{
+    background-color: #3c40c6;
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 30px;
+    transition: .3s linear;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+}
+
+.capacete, .viseira{
+    margin: 50px 0;
+    background-repeat: no-repeat;
+}
+
+.capacete{
+    padding: 150px 0;
+    background-image: url(../img/capacete.jpg);
+    background-size: 73vw;
+    background-position: center right 45vw;
+}
+
+.viseira {
+    padding: 0;
+    background-image: url(../img/viseira.jpg);
+    background-size: 140vw;
+    background-position: bottom -250px left 20vw;
+}
+
+.viseira .bg-white{
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background-color: #fff;
+}
+
+.rodape {
+    background: #333;
+    padding: 60px 0 40px;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+footer ul {
+    margin: 0 0 40px;
+    padding: 0 0 40px;
+    border-bottom: 1px solid #ccc;
+}
+
+footer ul li {
+    display: inline-block;
+    width: 100%;
+    font-size: 17px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.cta {
+    background-color: #3c40c6;
+    padding: 30px 0;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.cta .btn {
+    font-size: 18px;
+    border: 1px solid #fff;
+    font-weight: bold;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.cta p {
+    font-size: 20px;
+    margin: 0;
+    text-align: left;
+}
+
+.hero.inner{
+    padding: 50px 0;
+    text-align: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero.inner::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.hero.inner h1{
+    position: relative;
+    max-width: 100%;
+}
+
+.f-left{
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.content h2{
+    margin-top: 40px;
+}
+
+.content li{
+    margin-bottom: 5px;
+}
+
+@media (max-width: 991px){
+    .menu {
+        display: none;
+        position: fixed;
+        background-color: #fff;
+        top: 80px;
+        left: 0;
+        right: 0;
+    }
+
+    .menu li {
+        display: block;
+        margin: 25px;
+    }
+
+    .menu-open {
+        display: block;
+        position: relative;
+        margin-left: auto;
+        width: 40px;
+    }
+
+    .menu-open span,.menu-open:before,.menu-open:after{
+        width: 40px;
+        height: 5px;
+        background-color: #000;
+        transition: .3s linear;
+        display: block;
+    }
+    
+    .menu-open:before,.menu-open:after{
+        content: "";
+        position: absolute;
+        top: -10px;
+    }
+    
+    .menu-open:after {
+        top: auto;
+        bottom: -10px;
+    }
+
+    #menu-open {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    #menu-open:checked ~ .menu-open ~ .menu{
+        display: block;
+    }
+
+    #menu-open:checked ~ .menu-open span{
+        opacity: 0;
+    }
+
+    #menu-open:checked ~ .menu-open:before, #menu-open:checked ~ .menu-open:after{
+        top: 0;
+    }
+
+    #menu-open:checked ~ .menu-open:before {
+        transform: rotate(45deg);
+    }
+    
+    #menu-open:checked ~ .menu-open:after {
+        transform: rotate(-45deg);
+    }
+
+    .hero {
+        padding: 290px 0 10px;
+        background-size: 275%;
+        background-position: top -65px right -120px;
+    }
+
+    .capacete {
+        padding: 265px 0 20px;
+        background-size: 100vw;
+        background-position: top center;
+    }
+
+    .viseira {
+        padding: 260px 0 20px;
+        background-size: 280vw;
+        background-position: top -280px left -195px;
+    }
+    
+    .viseira .bg-white {
+        padding-top: 20px;
+        padding-bottom: 0;
+    }
+
+    .cta p {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 992px){
+    .col-l-12{width:100%}
+    .col-l-11{width:91.66666667%}
+    .col-l-10{width:83.33333333%}
+    .col-l-9{width:75%}
+    .col-l-8{width:66.66666667%}
+    .col-l-7{width:58.33333333%}
+    .col-l-6{width:50%}
+    .col-l-5{width:41.66666667%}
+    .col-l-4{width:33.33333333%}
+    .col-l-3{width:25%}
+    .col-l-2{width:16.66666667%}
+    .col-l-1{width:8.33333333%}
+
+    .hide-l{
+        display: none;
+    }
+
+    body{
+        margin-top: 90px;
+        margin-bottom: 250px;
+    }
+
+    .hero{
+        padding: 100px 0;
+        background-size: cover;
+    }
+
+    .hero h1{
+        font-size: 45px;
+        max-width: 45%;
+    }
+
+    h2{
+        font-size: 40px;
+    }
+
+    .capacete img{
+        padding-right: 25px;
+    }
+
+    footer ul li {
+        width: 33%;
+    }
+}
